@@ -139,7 +139,6 @@ export default class Drawflow {
   /* End Mobile Zoom */
   load() {
     for (var key in this.drawflow.drawflow[this.module].data) {
-      console.log("load key:", key, this.drawflow.drawflow[this.module].data[key])
       this.addNodeImport(this.drawflow.drawflow[this.module].data[key], this.precanvas);
     }
 
@@ -484,7 +483,6 @@ export default class Drawflow {
           var id_input = input_id.slice(5);
           var id_output = output_id.slice(5);
 
-          console.log('- ', id_output, this.drawflow.drawflow[this.module].data[id_output], this.drawflow.drawflow[this.module].data, input_class)
 
 
           this.drawflow.drawflow[this.module].data[id_output].outputs[output_class].connections.push( {"node": id_input, "output": input_class});
@@ -1317,7 +1315,6 @@ export default class Drawflow {
     const parent = document.createElement('div');
     parent.classList.add("parent-node");
 
-    console.log('Add node import;', dataNode.id)
 
     const node = document.createElement('div');
     node.innerHTML = "";
