@@ -483,6 +483,9 @@ export default class Drawflow {
           var id_input = input_id.slice(5);
           var id_output = output_id.slice(5);
 
+          console.log('- ', id_output, this.drawflow.drawflow[this.module].data[id_output], this.drawflow.drawflow[this.module].data, input_class)
+
+
           this.drawflow.drawflow[this.module].data[id_output].outputs[output_class].connections.push( {"node": id_input, "output": input_class});
           this.drawflow.drawflow[this.module].data[id_input].inputs[input_class].connections.push( {"node": id_output, "input": output_class});
           this.updateConnectionNodes('node-'+id_output);
