@@ -139,6 +139,7 @@ export default class Drawflow {
   /* End Mobile Zoom */
   load() {
     for (var key in this.drawflow.drawflow[this.module].data) {
+      console.log("load key:", key, this.drawflow.drawflow[this.module].data[key])
       this.addNodeImport(this.drawflow.drawflow[this.module].data[key], this.precanvas);
     }
 
@@ -1315,6 +1316,8 @@ export default class Drawflow {
   addNodeImport (dataNode, precanvas) {
     const parent = document.createElement('div');
     parent.classList.add("parent-node");
+
+    console.log('Add node import;', dataNode.id)
 
     const node = document.createElement('div');
     node.innerHTML = "";
