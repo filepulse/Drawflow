@@ -7,7 +7,7 @@
 
 ![Demo](https://github.com/jerosoler/Drawflow/raw/master/docs/drawflow.gif)
 
-Simple flow library. 1
+Simple flow library. 2
 
 Drawflow allows you to create data flows easily and quickly.
 
