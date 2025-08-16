@@ -1368,7 +1368,7 @@ export default class Drawflow {
     } else {
       if(parseInt(this.render.version) === 3 ) {
         //Vue 3
-        let wrapper = this.render.h(this.noderegister[dataNode.html].html, this.noderegister[dataNode.html].props, this.noderegister[dataNode.html].options);
+        let wrapper = this.render.h(this.noderegister[dataNode.html].html, {...this.noderegister[dataNode.html].props, id: dataNode.id}, this.noderegister[dataNode.html].options);
         wrapper.appContext = this.parent;
         this.render.render(wrapper,content);
 
